@@ -1,0 +1,133 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录页面",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/appointment/appointment",
+			"style": {
+				"navigationBarTitleText": "预约",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/profile/profile",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/profile/c-pages/profile-info/profile-info",
+			"style": {
+				"navigationBarTitleText": "个人信息",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/profile/c-pages/change-password/change-password",
+			"style": {
+				"navigationBarTitleText": "修改密码",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/profile/c-pages/contact/contact",
+			"style": {
+				"navigationBarTitleText": "紧急联系",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/profile/c-pages/my-reservation/my-reservation",
+			"style": {
+				"navigationBarTitleText": "我的预约",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/profile/c-pages/record/record",
+			"style": {
+				"navigationBarTitleText": "就诊记录",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/appointment/c-pages/appointment-page/appointment-page",
+			"style": {
+				"navigationBarTitleText": "预约挂号",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	    ,{
+            "path" : "pages/profile/c-pages/reservation-detail/reservation-detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "预约详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#1777FF",
+		"backgroundColor": "#F8F8F8",
+		"usingComponents": {
+			"van-button": "/wxcomponents/@vant/weapp/button/index",
+			"van-field": "/wxcomponents/@vant/weapp/field/index",
+			"van-toast": "/wxcomponents/@vant/weapp/toast/index",
+			"van-icon": "/wxcomponents/@vant/weapp/icon/index",
+			"van-image": "/wxcomponents/@vant/weapp/image/index",
+			"van-cell": "/wxcomponents/@vant/weapp/cell/index",
+			"van-radio": "/wxcomponents/@vant/weapp/radio/index",
+			"van-radio-group": "/wxcomponents/@vant/weapp/radio-group/index",
+			"van-calendar": "/wxcomponents/@vant/weapp/calendar/index",
+			"van-datetime-picker": "/wxcomponents/@vant/weapp/datetime-picker/index",
+			"van-popup": "/wxcomponents/@vant/weapp/popup/index",
+			"van-action-sheet": "/wxcomponents/@vant/weapp/action-sheet/index",
+			"van-tab": "/wxcomponents/@vant/weapp/tab/index",
+			"van-tabs": "/wxcomponents/@vant/weapp/tabs/index",
+			"van-divider": "/wxcomponents/@vant/weapp/divider/index",
+			"van-dialog": "/wxcomponents/@vant/weapp/dialog/index"
+		}
+	},
+	"tabBar": {
+		"color": "#707070",
+		"selectedColor": "#1777FF",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "./static/icon/home.png",
+				"selectedIconPath": "./static/icon/home_active.png"
+			},
+			{
+				"pagePath": "pages/appointment/appointment",
+				"text": "预约",
+				"iconPath": "./static/icon/yuyue.png",
+				"selectedIconPath": "./static/icon/yuyue_active.png"
+			},
+			{
+				"pagePath": "pages/profile/profile",
+				"text": "个人",
+				"iconPath": "./static/icon/profile.png",
+				"selectedIconPath": "static/icon/profile_active.png"
+			}
+		]
+	},
+	"uniIdRouter": {}
+}
