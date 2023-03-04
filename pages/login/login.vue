@@ -19,12 +19,10 @@
 			<van-button custom-style="margin-top:80rpx;" block round color="#0396FF" @click="handleLoginClick">登录
 			</van-button>
 			<view class="tip">
-				<text class="sign">
+				<text class="sign" @click="handleQuestionClick">
 					登录遇到问题?
 				</text>
-				<text class="forget">
-					忘记密码?
-				</text>
+				
 			</view>
 		</view>
 		<view class="bottom">
@@ -70,6 +68,12 @@
 			
 		})
 	}
+	
+	const handleQuestionClick = () => {
+		uni.navigateTo({
+			url:"./c-pages/question/question"
+		})
+	}
 </script>
 
 <style lang="scss">
@@ -99,19 +103,15 @@
 
 		.tip {
 			display: flex;
-			justify-content: space-between;
+			justify-content: flex-end;
 			align-items: center;
-			margin-top: 20rpx;
+			margin-top: 25rpx;
 			font-size: 24rpx;
 			color: #D3D3D3;
 
 			text {
 				height: 60rpx;
 				line-height: 60rpx;
-			}
-
-			.forget {
-				color: #0396FF;
 			}
 		}
 	}

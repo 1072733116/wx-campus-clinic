@@ -81,6 +81,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/login/c-pages/question/question",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "遇到问题",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",

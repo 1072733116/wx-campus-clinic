@@ -8,14 +8,14 @@
 <script setup>
 	import HomeBanner from "./components/home-banner.vue"
 	import HomeClickInformation from "./components/home-clinic-information.vue"
-	// import {
-	// 	onLoad
-	// } from "@dcloudio/uni-app"
-	// import useHomeStore from "@/store/home/home.js";
-	// const homeStore = useHomeStore();
-	// onLoad(() => {
-	// 	homeStore.getAllDoctorListAction()
-	// })
+	import {
+		onLoad
+	} from "@dcloudio/uni-app"
+	import useHomeStore from "@/store/home/home.js";
+	const homeStore = useHomeStore();
+	onLoad(() => {
+		homeStore.getAllDoctorListAction()
+	})
 </script>
 
 <style lang="scss">

@@ -7,13 +7,15 @@ import {
 } from "../../constant/login/index.js";
 import {
 	accountLoginRequest,
-	getLoginUserInfoRequest
+	getLoginUserInfoRequest,
+	getAdminListRequest
 } from "../../service/login/index.js"
 import cache from "../../utils/cache.js";
 const useLoginStore = defineStore("login", {
 	state: () => ({
 		user: cache.getCache(LOGIN_USER) ?? {},
-		token: cache.getCache(TOKEN) ?? ""
+		token: cache.getCache(TOKEN) ?? "",
+		adminList:[]
 	}),
 	actions: {
 		async userLoginAction(userAccount) {
@@ -23,6 +25,10 @@ const useLoginStore = defineStore("login", {
 			const userResult = await getLoginUserInfoRequest(loginResult.data.account)
 			this.user = userResult.data
 			cache.setCache(LOGIN_USER, this.user)
+		},
+		async getAdminList(){
+			const res = await getAdminListRequest();
+			this.adminList = res.data
 		}
 	},
 

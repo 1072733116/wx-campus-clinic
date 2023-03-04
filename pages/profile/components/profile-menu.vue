@@ -1,5 +1,5 @@
 <template>
-	<div class="menu">
+	<view class="menu">
 		<van-cell title="修改密码" is-link size="large" center @click="handleChangePasswordClick">
 			<i slot="icon" class="iconfont icon-xiugaimima icon1"></i>
 		</van-cell>
@@ -13,11 +13,10 @@
 		<van-cell title="退出登录" is-link size="large" center @click="handleLogoutClick">
 			<i slot="icon" class="iconfont icon-tuichudenglu icon4"></i>
 		</van-cell>
-	</div>
+	</view>
 </template>
 
 <script setup>
-	
 const handleChangePasswordClick = () => {
 	uni.navigateTo({
 		url:"/pages/profile/c-pages/change-password/change-password"
@@ -30,8 +29,10 @@ const handleContactClick = () => {
 	})
 }
 
+const emit = defineEmits(["logout"])
+
 const handleLogoutClick = () => {
-	
+	emit("logout")
 }
 </script>
 
