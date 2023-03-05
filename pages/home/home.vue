@@ -1,7 +1,7 @@
 <template>
 	<view class="home">
 		<home-banner></home-banner>
-		<home-click-information></home-click-information>
+		<home-click-information :status="clinicStatus.status"></home-click-information>
 	</view>
 </template>
 
@@ -9,13 +9,24 @@
 	import HomeBanner from "./components/home-banner.vue"
 	import HomeClickInformation from "./components/home-clinic-information.vue"
 	import {
-		onLoad
+		onLoad,
+		onShow
 	} from "@dcloudio/uni-app"
+	import {
+		storeToRefs
+	} from "pinia"
 	import useHomeStore from "@/store/home/home.js";
-	const homeStore = useHomeStore();
+
 	onLoad(() => {
 		homeStore.getAllDoctorListAction()
 	})
+	onShow(() => {
+		homeStore.getClinicStatusAction()
+	})
+	const homeStore = useHomeStore();
+	const {
+		clinicStatus
+	} = storeToRefs(homeStore)
 </script>
 
 <style lang="scss">

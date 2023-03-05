@@ -7,15 +7,17 @@ import {
 import {
 	profileChangePasswordRequest,
 	updateUserInfoRequest,
-	getMyStatusAppointmentByAccountRequest
+	getMyStatusAppointmentByAccountRequest,
+	getRecordListByUsNumberRequest
 } from "@/service/profile"
 import cache from "../../utils/cache";
 const useProfileStore = defineStore("profile", {
 	state: () => ({
 		readyList: [],
-		getList:[],
+		getList: [],
 		doneList: [],
-		cancelList:[]
+		cancelList: [],
+		recordList: []
 	}),
 	actions: {
 		async changePasswordAction(account) {
@@ -29,15 +31,20 @@ const useProfileStore = defineStore("profile", {
 		},
 		async getMyStatusAppointmentAction(account, status) {
 			const res = await getMyStatusAppointmentByAccountRequest(account, status);
-			if(status ==="预约中"){
+			if (status === "预约中") {
 				this.readyList = res.data
-			}else if(status === "已完成"){
+			} else if (status === "已完成") {
 				this.doneList = res.data
-			}else if(status === "已取消"){
+			} else if (status === "已取消") {
 				this.cancelList = res.data
-			}else{
+			} else {
 				this.getList = res.data
 			}
+		},
+		async getRecordListByUsNumberAction(account) {
+			const res = await getRecordListByUsNumberRequest(account);
+			this.recordList = res.data;
+			console.log(res);
 		}
 	}
 })

@@ -27,11 +27,10 @@
 </template>
 
 <script setup>
-	import {
-		ref
-	} from "vue"
-
-	const status = ref(false)
+	const props = defineProps({
+		status: Number,
+		default: false
+	})
 </script>
 
 <style lang="scss">
@@ -69,8 +68,8 @@
 				display: flex;
 				align-items: center;
 				padding-right: 10rpx;
-				
-				.status-title{
+
+				.status-title {
 					margin-right: 18rpx;
 				}
 

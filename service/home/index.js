@@ -6,6 +6,12 @@ const getAllDoctorListRequest = () => {
 	})
 }
 
+const getClinicStatusRequest = () => {
+	return request.get({
+		url:"/clinic"
+	})
+}
 export {
-	getAllDoctorListRequest
+	getAllDoctorListRequest,
+	getClinicStatusRequest
 }

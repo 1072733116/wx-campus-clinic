@@ -90,6 +90,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/profile/c-pages/record-detail/record-detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "就诊信息详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",

@@ -1,11 +1,11 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3903309 */
-  src: url('iconfont.woff2?t=1677828415079') format('woff2'),
-       url('iconfont.woff?t=1677828415079') format('woff'),
-       url('iconfont.ttf?t=1677828415079') format('truetype');
+  src: url('iconfont.woff2?t=1677924327676') format('woff2'),
+       url('iconfont.woff?t=1677924327676') format('woff'),
+       url('iconfont.ttf?t=1677924327676') format('truetype');
 }
 
-	.iconfont {
+.iconfont {
 		font-family: "iconfont" !important;
 		font-size: 36rpx;
 		padding-right: 10rpx;
@@ -14,7 +14,11 @@
 		font-style: normal;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-	}
+}
+
+.icon-arrow:before {
+  content: "\e6a1";
+}
 
 .icon-tuichudenglu:before {
   content: "\e695";

@@ -24,9 +24,16 @@ const getMyStatusAppointmentByAccountRequest = (account, status) => {
 	})
 }
 
+//record
+const getRecordListByUsNumberRequest = (usNumber) => {
+	return request.get({
+		url:`/record/${usNumber}`
+	})
+}
 
 export {
 	profileChangePasswordRequest,
 	updateUserInfoRequest,
-	getMyStatusAppointmentByAccountRequest
+	getMyStatusAppointmentByAccountRequest,
+	getRecordListByUsNumberRequest
 }
